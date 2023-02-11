@@ -3,12 +3,13 @@ const express = require("express");
 const cors = require('cors');
 const app = express();
 const PORT = 4000;
-const CARROT_HOST = 'localhost';
+// const CARROT_HOST = 'localhost';
+const CARROT_HOST = 'carrot-service.cluster.local';
 const CARROT_PORT = 5000;
 const PROTOCOL = 'http'
 
-app.use(express.json())
-app.use(cors())
+app.use(express.json());
+app.use(cors());
 
 const makeRequest = async (options) => {
     return new Promise((resolve, reject) => {

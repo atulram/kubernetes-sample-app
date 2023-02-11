@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: carrot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: carrot
+  template:
+    metadata:
+      labels:
+        app: carrot
+    spec:
+      containers:
+      - name: carrot
+        image: atulram4/coraculator-carrot:1.0.0
+        ports:
+        - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: carrot-service
+spec:
+  selector:
+    app: carrot
+  ports:
+  - name: http
+    port: 5000

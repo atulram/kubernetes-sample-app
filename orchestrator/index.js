@@ -3,13 +3,13 @@ const express = require("express");
 const cors = require('cors');
 const app = express()
 const PORT = 3000;
-const ALBERT_HOST = 'localhost';
+// const ALBERT_HOST = 'localhost';
+const ALBERT_HOST = 'albert-service.cluster.local';
 const ALBERT_PORT = 4000;
 const PROTOCOL = 'http'
 
 app.use(express.json())
 app.use(cors())
-
 
 const makeRequest = async (options) => {
     return new Promise((resolve, reject) => {
