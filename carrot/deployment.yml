@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: carrot
-        image: atulram4/coraculator-carrot:1.0.0
+        image: atulram4/coraculator-carrot:1.2.0
         ports:
         - containerPort: 5000
 ---

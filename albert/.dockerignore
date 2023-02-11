@@ -1,5 +1,4 @@
 node_modules
-
+deployment.yml
 .git
-
 .dockerignore
