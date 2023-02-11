@@ -18,9 +18,9 @@ spec:
         - name: CARROT_HOST
           value: "carrot-service.coraculator.svc.cluster.local"
         - name: CARROT_PORT
-          value: 5000
+          value: "5000"
         - name: PORT
-          value: 4000
+          value: "4000"
         image: atulram4/coraculator-albert:1.3.0
         ports:
         - containerPort: 4000

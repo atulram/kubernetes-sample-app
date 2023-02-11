@@ -18,10 +18,10 @@ spec:
         - name: REDIS_HOST
           value: "redis-service.coraculator.svc.cluster.local"
         - name: REDIS_PORT
-          value: 6379
+          value: "6379"
         - name: PORT
-          value: 5000
-        image: atulram4/coraculator-carrot:1.3.0
+          value: "5000"
+        image: atulram4/coraculator-carrot:1.4.0
         ports:
         - containerPort: 5000
 ---

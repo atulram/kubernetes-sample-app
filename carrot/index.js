@@ -15,10 +15,12 @@ let client;
 //(async () => {})();
 
 client = redis.createClient({
-    host: REDIS_HOST,
-    port: REDIS_PORT
-  });
-  
+    legacyMode: true,
+    socket: {
+        host: REDIS_HOST,
+        port: REDIS_PORT
+    }
+});
 client.on('connect', () => {
     console.log('Redis client connected');
 });
