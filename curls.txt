@@ -1,0 +1,57 @@
+# orchestrator
+
+curl -X POST \
+  http://localhost:3000/calculate \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"opn1": 7,
+	"opn2": 2,
+	"opn3": 3,
+	"op1": "+",
+	"op2": "-"
+}'
+
+
+
+# albert 
+
+curl -X POST \
+  http://localhost:4000/add \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"opn1": 3,
+	"opn2": 8
+}'
+
+curl -X POST \
+  http://localhost:4000/sub \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"opn1": 3,
+	"opn2": 8
+}'
+
+
+
+
+# carrot
+
+curl -X GET \
+  'http://localhost:5000/retrieve?key=2%2B5'
+
+curl -X GET \
+  'http://localhost:5000/retrieve?key=3-1'
+
+
+curl -X POST \
+  http://localhost:5000/store \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"key": "3+4",
+	"value": 7
+}'
+
+curl -X POST \
+  http://localhost:5000/store \
+  -H 'Content-Type: application/json' \
+  -d '{"key": "4+3", "value": 7}'
