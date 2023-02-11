@@ -1,10 +1,10 @@
 const redis = require("redis");
 const express = require("express");
 const cors = require('cors');
-const app = express()
-const PORT = 5000;
-const REDIS_PORT = 6379;
-const REDIS_HOST = 'redis-service.cluster.local';
+const app = express();
+const PORT = process.env.PORT || 5000;
+const REDIS_HOST = process.env.REDIS_HOST || 'localhost';
+const REDIS_PORT = process.env.REDIS_PORT || 6379;
 
 app.use(express.json())
 app.use(cors())

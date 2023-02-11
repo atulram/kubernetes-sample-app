@@ -2,10 +2,9 @@ const request = require("request");
 const express = require("express");
 const cors = require('cors');
 const app = express()
-const PORT = 3000;
-// const ALBERT_HOST = 'localhost';
-const ALBERT_HOST = 'albert-service.cluster.local';
-const ALBERT_PORT = 4000;
+const PORT = process.env.PORT || 3000;
+const ALBERT_HOST = process.env.ALBERT_HOST || 'localhost';
+const ALBERT_PORT = process.env.ALBERT_PORT || 4000;
 const PROTOCOL = 'http'
 
 app.use(express.json())
