@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: orchestrator
-        image: atulram4/coraculator-orchestrator
+        image: atulram4/coraculator-orchestrator:1.0.0
         ports:
         - containerPort: 3000
 ---
