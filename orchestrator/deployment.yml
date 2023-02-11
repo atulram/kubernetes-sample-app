@@ -25,7 +25,7 @@ metadata:
 spec:
   selector:
     app: orchestrator
-  type: NodePort
+  type: LoadBalancer
   ports:
   - name: http
     port: 80
